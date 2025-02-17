@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'hi',
-    description: 'Responds to the word "hi".',
+    name: 'Oi',
+    description: 'Responds to the word "oi".',
     event: async function ({ ptz, m, sender }) {
         const body = (
             m.mtype === 'conversation' && m.message.conversation ||
@@ -10,8 +10,8 @@ module.exports = {
             m.mtype === 'extendedTextMessage' && m.message.extendedTextMessage.text
         ) || '';
 
-        if (body.toLowerCase() === 'hi') {
-            await m.reply(`Hello, @${sender.split('@')[0]}! I am Aterus bot of Mr Anthony. How can i help you?`);
+        if (body.toLowerCase() === 'oi') {
+            await m.reply(`Hello, @${sender.split('@')[0]}! Mr Anthony is busy.. I am aterus bot of Anthony how can i help you?`);
         }
     }
 };
